@@ -2,10 +2,27 @@
 //
 
 #include <iostream>
-
+#include"Tableau.h"
+#include"Tableauborne.h"
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
+	Tableau T1(3);
+
+	T1[0] = 1;
+	T1[1] = 2;
+	T1[2] = 3;
+	T1.afficher();
+
+	Tableau T2 = T1;//constructeur de copie
+
+	Tableau T3(5);//operator=
+	T3 = T1;
+
+	Tableauborne tab(4, 10, 30);
+	for (int i = 0;i < 4;i++) {
+		cout << tab[i] << endl;
+	}
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
